@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">loginSprint1</string>
+    <string name="app_name">Delivery Pizza</string>
+    <string name="activity_main">Login</string>
+    <string name="activity_second">Menu</string>
 </resources>
