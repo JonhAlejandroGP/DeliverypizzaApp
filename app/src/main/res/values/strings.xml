@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Delivery Pizza</string>
-    <string name="activity_main">Login</string>
-    <string name="activity_second">Menu</string>
+    <string name="prompt_user">Usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="Login">Iniciar Sesión</string>
+    <string name="invalidPassword">La constraseña debería tener >8 letras</string>
 </resources>

@@ -10,15 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginSprint1" >
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".IngresActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainIngress2"
-            android:exported="false" />
-        <activity
             android:name=".MenuActivity"
             android:exported="false"
             android:label="@string/activity_second" />
