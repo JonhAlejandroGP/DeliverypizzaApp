@@ -2,4 +2,8 @@
     <string name="app_name">Delivery Pizza</string>
     <string name="activity_main">Login</string>
     <string name="activity_second">Menu</string>
+    <string name="BotonIngreso">Ingreso</string>
+    <string name="tv1">Bienvenido a DeliveryApp</string>
+    <string name="BotonRegistro">Registro</string>
+    <string name="BotonLogin">Login</string>
 </resources>
