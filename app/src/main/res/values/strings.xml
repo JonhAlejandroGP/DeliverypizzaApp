@@ -2,4 +2,5 @@
     <string name="app_name">Delivery Pizza</string>
     <string name="activity_main">Login</string>
     <string name="activity_second">Menu</string>
+    <string name="Bienvenida">Hola mundo</string>
 </resources>
