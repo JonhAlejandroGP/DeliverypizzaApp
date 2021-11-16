@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -58,12 +59,13 @@ public class LoginActivity extends AppCompatActivity {
                 contraseña.setText("");
             } else {
                 Toast.makeText(this, "Ya se puede validar el usuario en la BD", Toast.LENGTH_SHORT).show();
+                Intent toMenu = new Intent(LoginActivity.this, MenuActivity.class);
+                startActivity(toMenu);
             }
         }
     }
-
-    public void  Menu(View view){
-        Intent menu = new Intent(this, MenuActivity.class);
-        startActivity(menu);
+    public void toRegister(View v){
+        Intent toRegisterActivity = new Intent(this, RegisterActivity.class);
+        startActivity(toRegisterActivity);
     }
 }
