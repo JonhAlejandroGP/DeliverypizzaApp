@@ -9,11 +9,13 @@ import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
     //Se identifican los componentes visuales
     TextInputEditText usuario, contraseña;
+    TextInputLayout inputUsuario;
     MaterialButton btnlogin;
 
     String email, password;
@@ -26,6 +28,8 @@ public class LoginActivity extends AppCompatActivity {
         //Se asigna a cada componente un elemento de la vista
         usuario = findViewById(R.id.user_edit_text);
         contraseña = findViewById(R.id.password_edit_text);
+        inputUsuario = findViewById(R.id.user_text_input);
+
         btnlogin = findViewById(R.id.next_button);
     }
 
@@ -49,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
             if (accountant > 1 | accountant < 1 | acc > 1 | acc < 1) {
-                Toast.makeText(this, "El correo electrónico no es valido", Toast.LENGTH_LONG).show();
+                inputUsuario.setError("El correo electrónico no es valido");
                 usuario.setText("");
                 contraseña.setText("");
             } else {
