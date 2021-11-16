@@ -6,7 +6,8 @@
   <color name="secondaryColor">#e81414</color>
   <color name="secondaryLightColor">#ff5a40</color>
   <color name="secondaryDarkColor">#ad0000</color>
-  <color name="primaryTextColor">#000000</color>
+  <color name="onPrimaryColor">#232426</color>
   <color name="secondaryTextColor">#ffffff</color>
   <color name="accent">#14E881</color>
+  <color name="hintTextColor">#2C98F0</color>
 </resources>

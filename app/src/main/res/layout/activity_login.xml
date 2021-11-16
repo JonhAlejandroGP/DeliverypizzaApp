@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login_backgound"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -35,13 +36,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:text="@string/Login"
+                    android:textAppearance="@style/TextAppearance.MyApp.Headline5"
+                    android:textColor="@color/onPrimaryColor"
                     android:textSize="24sp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
-                    android:hint="@string/prompt_user">
+                    android:hint="@string/prompt_user"
+                    app:hintTextColor="#616161">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/user_edit_text"
@@ -58,7 +62,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="16dp"
                     android:hint="@string/prompt_password"
-                    app:errorEnabled="true">
+                    app:boxStrokeColor="#2C98F0"
+                    app:errorEnabled="true"
+                    app:hintTextColor="#2C98F0">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/password_edit_text"
@@ -69,13 +75,6 @@
                     </com.google.android.material.textfield.TextInputEditText>
                 </com.google.android.material.textfield.TextInputLayout>
 
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:text="@string/forgotPassword" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/next_button"
