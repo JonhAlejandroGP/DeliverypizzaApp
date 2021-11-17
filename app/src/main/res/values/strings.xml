@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Pizzery</string>
-    <string name="prompt_user">Usuario</string>
+    <string name="prompt_user">Correo electronico</string>
     <string name="prompt_password">Contraseña</string>
-    <string name="Login">Iniciar Sesión</string>
+    <string name="Login">Iniciar Sesión con Email</string>
     <string name="invalidPassword">La constraseña debería tener >8 letras</string>
     <string name="forgotPassword">Olvido su contraseña</string>
 </resources>

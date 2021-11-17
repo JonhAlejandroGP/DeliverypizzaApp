@@ -1,5 +1,6 @@
 package com.example.loginsprint1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,9 +9,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -18,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     TextInputEditText usuario, contraseña;
     TextInputLayout inputUsuario;
     MaterialButton btnlogin;
-
+    private FirebaseAuth mAuth;
     String email, password;
 
     @Override
@@ -30,8 +36,8 @@ public class LoginActivity extends AppCompatActivity {
         usuario = findViewById(R.id.user_edit_text);
         contraseña = findViewById(R.id.password_edit_text);
         inputUsuario = findViewById(R.id.user_text_input);
-
         btnlogin = findViewById(R.id.next_button);
+        mAuth = FirebaseAuth.getInstance();
     }
 
     //Se crea una función para determinar que el correo si sea valido
@@ -58,10 +64,35 @@ public class LoginActivity extends AppCompatActivity {
                 usuario.setText("");
                 contraseña.setText("");
             } else {
-                Toast.makeText(this, "Ya se puede validar el usuario en la BD", Toast.LENGTH_SHORT).show();
-                Intent toMenu = new Intent(LoginActivity.this, MenuActivity.class);
-                startActivity(toMenu);
+                mAuth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                   // Log.d(TAG, "signInWithEmail:success");
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    updateUI(user);
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                   // Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                    Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                            Toast.LENGTH_SHORT).show();
+                                    updateUI(null);
+                                }
+                            }
+                        });
+                //Toast.makeText(this, "Ya se puede validar el usuario en la BD", Toast.LENGTH_SHORT).show();
+
             }
+        }
+    }
+    public void updateUI(FirebaseUser user){
+        if(user!=null)
+        {
+            Intent newIntent = new Intent(this, MainActivity.class);
+            startActivity(newIntent);
+            finish();
         }
     }
     public void toRegister(View v){
