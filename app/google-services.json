@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "746253486989",
+    "project_id": "deliverypizzaapp-b2302",
+    "storage_bucket": "deliverypizzaapp-b2302.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746253486989:android:e7736d97caf8177c0b0bc4",
+        "android_client_info": {
+          "package_name": "com.example.loginsprint1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746253486989-8eriqm8m3knge7i5biosdea3i3mot9ke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBekmHUzqnKvaNvwXqamwPZnmLVhQyHGYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746253486989-8eriqm8m3knge7i5biosdea3i3mot9ke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
