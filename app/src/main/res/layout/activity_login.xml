@@ -89,6 +89,12 @@
 
                 </com.google.android.material.button.MaterialButton>
 
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/idsesiongoogle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
