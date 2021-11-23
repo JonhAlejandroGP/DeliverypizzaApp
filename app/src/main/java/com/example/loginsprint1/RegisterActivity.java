@@ -35,7 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
     public void crearCuenta(View b)
     {
         String correo = et1.getText().toString();
-        String contrasena = et1.getText().toString();
+        String contrasena = et2.getText().toString();
         mAuth.createUserWithEmailAndPassword(correo, contrasena)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override

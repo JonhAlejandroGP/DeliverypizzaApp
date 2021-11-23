@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -79,7 +80,15 @@ public class MainActivity extends AppCompatActivity {
             startActivity(newIntent);
 
             return super.onOptionsItemSelected(menuItem);
-        }else {
+        } else if (id==R.id.Cierra_sesion){
+            FirebaseAuth.getInstance().signOut();
+            LoginManager.getInstance().logOut();
+            Intent newIntent = new Intent(this, LoginActivity.class);
+            newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(newIntent);
+            return super.onOptionsItemSelected(menuItem);
+        }
+        else {
             return super.onOptionsItemSelected(menuItem);
         }
     }
