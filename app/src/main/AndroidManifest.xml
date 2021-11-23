@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginSprint1">
         <activity
+            android:name=".CompraActivity"
+            android:exported="false"
+            android:label="Confirmar Compra" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
@@ -29,7 +33,7 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

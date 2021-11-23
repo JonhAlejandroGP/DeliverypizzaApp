@@ -19,6 +19,9 @@ public class Splashscreen extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        //Primero vamos a bloquear la rotación de pantalla (Modo vertical)
+        getSupportActionBar().hide();
+
         TimerTask timertask = new TimerTask() {
             @Override
             public void run() {

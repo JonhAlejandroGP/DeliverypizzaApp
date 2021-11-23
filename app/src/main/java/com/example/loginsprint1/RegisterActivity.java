@@ -28,6 +28,8 @@ public class RegisterActivity extends AppCompatActivity {
         et1 = (EditText) findViewById(R.id.editTextTextPersonName);
         et2 = (EditText) findViewById(R.id.editTextTextPassword);
 
+        //Ocultar ActionBar (Donde sale el nombre de las Activities)
+        getSupportActionBar().hide();
     }
 
     public void crearCuenta(View b)

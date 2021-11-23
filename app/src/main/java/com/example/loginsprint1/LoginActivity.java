@@ -60,7 +60,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
+        //Ocultar ActionBar (Donde sale el nombre de las Activities)
+        getSupportActionBar().hide();
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
