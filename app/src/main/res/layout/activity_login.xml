@@ -89,17 +89,61 @@
 
                 </com.google.android.material.button.MaterialButton>
 
-                <com.google.android.gms.common.SignInButton
-                    android:id="@+id/idsesiongoogle"
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <com.facebook.login.widget.LoginButton
-                    android:id="@+id/login_button"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="30dp" />
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="Iniciar sesión con:"
+                    android:textColor="@color/onPrimaryColor" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginRight="28dp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/button_sesiongoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_icons8_logo_de_google"
+                        app:backgroundTint="@color/primaryColor"
+                        app:fabSize="normal"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Google"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginLeft="28dp">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/button_sesionfacebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_icons8_facebook_rodeado_de_c_rculo"
+                        app:backgroundTint="@color/primaryColor"
+                        app:fabSize="normal"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Facebook"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
 
 
             </LinearLayout>
@@ -111,16 +155,25 @@
             android:layout_height="4dp"
             android:layout_margin="24dp"
             android:background="@color/secondaryDarkColor"
-            android:elevation="4dp" />
-
+            android:elevation="6dp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:clickable="true"
             android:onClick="toRegister"
             android:text="¿No te has registrado aún?" />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrarse"
+            android:layout_marginVertical="28dp"/>
+</LinearLayout>
 
     </LinearLayout>
 
