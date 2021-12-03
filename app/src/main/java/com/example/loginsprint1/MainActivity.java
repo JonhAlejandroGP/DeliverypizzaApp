@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu (Menu menu) {
         //Infla el menu y la actividad y se asegura cual menu poner
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_nav, menu);
+        inflater.inflate(R.menu.menu_navegacion, menu);
         //getMenuInflater().inflate(R.menu.menu_nav, menu);
         return true;
     }
