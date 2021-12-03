@@ -63,9 +63,9 @@ public class LoginActivity extends AppCompatActivity {
         contraseña = findViewById(R.id.password_edit_text);
         inputUsuario = findViewById(R.id.user_text_input);
         btnlogin = findViewById(R.id.next_button);
-        btnLoging=(SignInButton) findViewById(R.id.idsesiongoogle);
-        btnFbLogin = (LoginButton) findViewById(R.id.login_button);
-//        btnLoging.setOnClickListener((View.OnClickListener) this);
+        btnLoging=(SignInButton) findViewById(R.id.button_sesiongoogle);
+        btnFbLogin = (LoginButton) findViewById(R.id.button_sesionfacebook);
+
         mCallbackManager = CallbackManager.Factory.create();
 
         //Accion de boton de inicio de sesion google
@@ -76,7 +76,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
         btnFbLogin.setReadPermissions("email", "public_profile");
         btnFbLogin.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -84,7 +83,6 @@ public class LoginActivity extends AppCompatActivity {
                 Log.d(TAG, "facebook:onSuccess:" + loginResult);
                 handleFacebookAccessToken(loginResult.getAccessToken());
             }
-
             @Override
             public void onCancel() {
                 Log.d(TAG, "facebook:onCancel");

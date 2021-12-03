@@ -3,6 +3,7 @@ package com.example.loginsprint1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         tv1=(TextView) findViewById(R.id.Welcomeid);
-
+      //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
@@ -38,47 +39,31 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    /*//Metodo para el boton ingreso
-
-    public void Ingres(View view){
-
-        Intent ingres = new Intent (this, IngresActivity.class);
-        startActivity(ingres);
-
-    }
-    //Metodo para el boton registro
-
-    public void Register(View view){
-        Intent register = new Intent (this, RegisterActivity.class);
-        startActivity(register);
-    }*/
 
     //crear menu de navegación
+    @Override
     public boolean onCreateOptionsMenu (Menu menu) {
         //Infla el menu y la actividad y se asegura cual menu poner
-        getMenuInflater().inflate(R.menu.menu_navegacion, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_nav, menu);
+        //getMenuInflater().inflate(R.menu.menu_nav, menu);
         return true;
     }
 
     //Estar atento cuando el usuario toca algun aparte de la pantalla grande
+    @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         //Variable almacena un codigo del el usuario cuando toque un boton
         int id = menuItem.getItemId();
         if (id == R.id.vista_compras) {
             Intent newIntent = new Intent(this, CompraActivity.class);
             newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            //newIntent.putExtra("usuario","El usuario inicio sesión");
-            //newIntent.putExtra("numero",2021);
             startActivity(newIntent);
-
             return super.onOptionsItemSelected(menuItem);
         }else if (id == R.id.vista_menu){
             Intent newIntent = new Intent(this, MenuActivity.class);
             newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            //newIntent.putExtra("usuario","El usuario inicio sesión");
-            //newIntent.putExtra("numero",2021);
             startActivity(newIntent);
-
             return super.onOptionsItemSelected(menuItem);
         } else if (id==R.id.Cierra_sesion){
             FirebaseAuth.getInstance().signOut();
