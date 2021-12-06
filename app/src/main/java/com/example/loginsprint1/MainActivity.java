@@ -72,8 +72,12 @@ public class MainActivity extends AppCompatActivity {
             newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(newIntent);
             return super.onOptionsItemSelected(menuItem);
-        }
-        else {
+        }else if (id == R.id.lista_pedidos){
+            Intent newIntent = new Intent(this, PedidoActivity.class);
+            newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(newIntent);
+            return super.onOptionsItemSelected(menuItem);
+        }else {
             return super.onOptionsItemSelected(menuItem);
         }
     }
