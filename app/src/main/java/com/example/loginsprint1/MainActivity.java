@@ -17,15 +17,21 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tv1;
-
+    private  TextView tv2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         tv1=(TextView) findViewById(R.id.Welcomeid);
+        tv2=(TextView) findViewById(R.id.textView12);
       //  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            tv2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
+                }
+            });
     }
 
     @Override
@@ -38,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
             tv1.setText(nombre);
         }
 
+    }
+
+    public void irMapa(View v)
+    {
+        Intent newIntent = new Intent(this, MapsActivity.class);
+        newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(newIntent);
     }
 
     //crear menu de navegación
