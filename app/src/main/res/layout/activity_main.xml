@@ -29,15 +29,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:clickable="true"
-                android:onClick="irMapa"
-                android:text="Agregar Direccion de entrega" />
+                android:onClick="irMapa" />
 
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="irMapa"
-                android:text="ir" />
         </LinearLayout>
 
     </LinearLayout>

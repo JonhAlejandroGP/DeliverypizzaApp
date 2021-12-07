@@ -90,7 +90,19 @@ public class MainActivity extends AppCompatActivity {
             newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(newIntent);
             return super.onOptionsItemSelected(menuItem);
-        }else {
+        }else if(id== R.id.vista_map){
+            Intent newIntent = new Intent(this, MapsActivity.class);
+            newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(newIntent);
+            return super.onOptionsItemSelected(menuItem);
+        }
+        else if(id== R.id.vista_perfil){
+            Intent newIntent = new Intent(this, PerfilActivity.class);
+            newIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(newIntent);
+            return super.onOptionsItemSelected(menuItem);
+        }
+        else {
             return super.onOptionsItemSelected(menuItem);
         }
     }
